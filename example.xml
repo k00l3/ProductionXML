@@ -1,0 +1,513 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Planning xsi:noNamespaceSchemaLocation="CortexPlanningInterface.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <publications>
+        <publication>
+            <name>SO Main Body</name>
+            <sourceId>2023-6-23/SO Main Body</sourceId>
+            <code>SO</code>
+            <date>June-23-2023</date>
+            <editions>
+                <edition>
+                    <name>First</name>
+                    <sourceId>2023-6-23/SO Main Body/First</sourceId>
+                    <code>E1</code>
+                    <zones>
+                        <zone>
+                            <name>All Sites</name>
+                            <sourceId>2023-6-23/SO Main Body/First/All Sites</sourceId>
+                            <code>AL</code>
+							<sections>
+                                <section>
+                                    <name>Section1</name>
+                                    <sourceId>2023-6-23/SO Main Body/First/All Sites/Section1</sourceId>
+                                    <code>S1</code>
+                                    <pages>
+                                        <page>
+                                            <name>S1_1</name>
+                                            <sourceId>2023-6-23/SO Main Body/First/All Sites/Section1/1/30359340</sourceId>
+                                            <structureExpectedName>SO08_06_23SOP001_AL-30359340.PDF</structureExpectedName>
+                                            <commonId>30359340</commonId>
+                                            <panoramaType>SINGLE</panoramaType>
+                                            <numberInSection>1</numberInSection>
+                                            <pageSeparations>
+                                                <pageSeparation>
+                                                    <name>yellow</name>
+                                                    <sourceId>2023-6-23/SO Main Body/First/All Sites/Section1/1/yellow/30359340</sourceId>
+                                                    <contentCustomIcons/>
+                                                    <structureExpectedName>SO08_06_23SOP001_AL-30359340.y</structureExpectedName>
+                                                    <commonId>30359340-yellow</commonId>
+                                                </pageSeparation>
+                                                <pageSeparation>
+                                                    <name>black</name>
+                                                    <sourceId>2023-6-23/SO Main Body/First/All Sites/Section1/1/black/30359340</sourceId>
+                                                    <contentCustomIcons/>
+                                                    <structureExpectedName>SO08_06_23SOP001_AL-30359340.k</structureExpectedName>
+                                                    <commonId>30359340-black</commonId>
+                                                </pageSeparation>
+                                                <pageSeparation>
+                                                    <name>cyan</name>
+                                                    <sourceId>2023-6-23/SO Main Body/First/All Sites/Section1/1/cyan/30359340</sourceId>
+                                                    <contentCustomIcons/>
+                                                    <structureExpectedName>SO08_06_23SOP001_AL-30359340.c</structureExpectedName>
+                                                    <commonId>30359340-cyan</commonId>
+                                                </pageSeparation>
+                                                <pageSeparation>
+                                                    <name>magenta</name>
+                                                    <sourceId>2023-6-23/SO Main Body/First/All Sites/Section1/1/magenta/30359340</sourceId>
+                                                    <contentCustomIcons/>
+                                                    <structureExpectedName>SO08_06_23SOP001_AL-30359340.m</structureExpectedName>
+                                                    <commonId>30359340-magenta</commonId>
+                                                </pageSeparation>
+                                            </pageSeparations>
+                                        </page>
+                                        <page>
+                                            <name>S1_2</name>
+                                            <sourceId>2023-6-23/SO Main Body/First/All Sites/Section1/2/85785264</sourceId>
+                                            <structureExpectedName>SO08_06_23SOP002_AL-85785264.PDF</structureExpectedName>
+                                            <commonId>85785264</commonId>
+                                            <panoramaType>SINGLE</panoramaType>
+                                            <numberInSection>1</numberInSection>
+                                            <pageSeparations>
+                                                <pageSeparation>
+                                                    <name>yellow</name>
+                                                    <sourceId>2023-6-23/SO Main Body/First/All Sites/Section1/1/yellow/85785264</sourceId>
+                                                    <contentCustomIcons/>
+                                                    <structureExpectedName>SO08_06_23SOP002_AL-85785264.y</structureExpectedName>
+                                                    <commonId>85785264-yellow</commonId>
+                                                </pageSeparation>
+                                                <pageSeparation>
+                                                    <name>black</name>
+                                                    <sourceId>2023-6-23/SO Main Body/First/All Sites/Section1/1/black/85785264</sourceId>
+                                                    <contentCustomIcons/>
+                                                    <structureExpectedName>SO08_06_23SOP002_AL-85785264.k</structureExpectedName>
+                                                    <commonId>85785264-black</commonId>
+                                                </pageSeparation>
+                                                <pageSeparation>
+                                                    <name>cyan</name>
+                                                    <sourceId>2023-6-23/SO Main Body/First/All Sites/Section1/1/cyan/85785264</sourceId>
+                                                    <contentCustomIcons/>
+                                                    <structureExpectedName>SO08_06_23SOP002_AL-85785264.c</structureExpectedName>
+                                                    <commonId>85785264-cyan</commonId>
+                                                </pageSeparation>
+                                                <pageSeparation>
+                                                    <name>magenta</name>
+                                                    <sourceId>2023-6-23/SO Main Body/First/All Sites/Section1/1/magenta/85785264</sourceId>
+                                                    <contentCustomIcons/>
+                                                    <structureExpectedName>SO08_06_23SOP002_AL-85785264.m</structureExpectedName>
+                                                    <commonId>85785264-magenta</commonId>
+                                                </pageSeparation>
+                                            </pageSeparations>
+                                        </page>
+                                    </pages>
+                                </section>
+                            </sections>
+                            <books>
+                                <book>
+                                    <name>Book1</name>
+                                    <sourceId>2023-6-23/SO Main Body/First/All Sites/Books/Book1</sourceId>
+                                    <code>B01</code>
+                                    <impositionType>broadsheet</impositionType>
+                                    <forms>
+                                        <form>
+                                            <name>1</name>
+                                            <sourceId>2023-6-23/SO Main Body/First/All Sites/Books/Book1/1</sourceId>
+                                            <commonId>2023-6-23/SO Main Body13cd0e6b12dbc85e32e2b32e18dc7d210</commonId>
+                                            <PageMatrixWidth>1</PageMatrixWidth>
+                                            <PageMatrixHeight>1</PageMatrixHeight>
+                                            <pagesLocationOnForm>
+                                                <pageLocationOnForm>
+                                                    <orientation>0</orientation>
+                                                    <sourceId>2023-6-23/SO Main Body/First/All Sites/Section1/1/30359340</sourceId>
+                                                    <index>0</index>
+                                                </pageLocationOnForm>
+                                            </pagesLocationOnForm>
+                                            <formSeparations>
+                                                <formSeparation>
+                                                    <name>yellow</name>
+                                                    <sourceId>2023-6-23/SO Main Body/First/All Sites/Books/Book1/1/yellow/30359340</sourceId>
+                                                    <contentCustomIcons/>
+                                                    <commonId>30359340-yellow</commonId>
+													<platesRef>
+                                                        <plateRef>2023-6-23/SO Main Body/First/All Sites/Books/Book1/1/yellow:First_All Sites_1:0</plateRef>
+                                                    </platesRef>
+                                                </formSeparation>
+                                                <formSeparation>
+                                                    <name>black</name>
+                                                    <sourceId>2023-6-23/SO Main Body/First/All Sites/Books/Book1/1/black/30359340</sourceId>
+                                                    <contentCustomIcons/>
+                                                    <commonId>30359340-black</commonId>
+													<platesRef>
+                                                        <plateRef>2023-6-23/SO Main Body/First/All Sites/Books/Book1/1/black:First_All Sites_1:0</plateRef>
+                                                    </platesRef>
+                                                </formSeparation>
+                                                <formSeparation>
+                                                    <name>cyan</name>
+                                                    <sourceId>2023-6-23/SO Main Body/First/All Sites/Books/Book1/1/cyan/30359340</sourceId>
+                                                    <contentCustomIcons/>
+                                                    <commonId>30359340-cyan</commonId>
+													<platesRef>
+                                                        <plateRef>2023-6-23/SO Main Body/First/All Sites/Books/Book1/1/cyan:First_All Sites_1:0</plateRef>
+                                                    </platesRef>
+                                                </formSeparation>
+                                                <formSeparation>
+                                                    <name>magenta</name>
+                                                    <sourceId>2023-6-23/SO Main Body/First/All Sites/Books/Book1/1/magenta/30359340</sourceId>
+                                                    <contentCustomIcons/>
+                                                    <commonId>30359340-magenta</commonId>
+													<platesRef>
+                                                        <plateRef>2023-6-23/SO Main Body/First/All Sites/Books/Book1/1/magenta:First_All Sites_1:0</plateRef>
+                                                    </platesRef>
+                                                </formSeparation>
+                                            </formSeparations>
+                                        </form>
+                                        <form>
+                                            <name>2</name>
+                                            <sourceId>2023-6-23/SO Main Body/First/All Sites/Books/Book1/2</sourceId>
+                                            <commonId>2023-6-23/SO Main Body58gt8y7h33abc99t55c5h55y99nb8k354</commonId>
+                                            <PageMatrixWidth>1</PageMatrixWidth>
+                                            <PageMatrixHeight>1</PageMatrixHeight>
+                                            <pagesLocationOnForm>
+                                                <pageLocationOnForm>
+                                                    <orientation>0</orientation>
+                                                    <sourceId>2023-6-23/SO Main Body/First/All Sites/Section1/2/85785264</sourceId>
+                                                    <index>0</index>
+                                                </pageLocationOnForm>
+                                            </pagesLocationOnForm>
+                                            <formSeparations>
+                                                <formSeparation>
+                                                    <name>yellow</name>
+                                                    <sourceId>2023-6-23/SO Main Body/First/All Sites/Books/Book1/2/yellow/85785264</sourceId>
+                                                    <contentCustomIcons/>
+                                                    <commonId>85785264-yellow</commonId>
+													<platesRef>
+                                                        <plateRef>2023-6-23/SO Main Body/First/All Sites/Books/Book1/2/yellow:First_All Sites_1:0</plateRef>
+                                                    </platesRef>
+                                                </formSeparation>
+                                                <formSeparation>
+                                                    <name>black</name>
+                                                    <sourceId>2023-6-23/SO Main Body/First/All Sites/Books/Book1/2/black/85785264</sourceId>
+                                                    <contentCustomIcons/>
+                                                    <commonId>85785264-black</commonId>
+													<platesRef>
+                                                        <plateRef>2023-6-23/SO Main Body/First/All Sites/Books/Book1/2/black:First_All Sites_1:0</plateRef>
+                                                    </platesRef>
+                                                </formSeparation>
+                                                <formSeparation>
+                                                    <name>cyan</name>
+                                                    <sourceId>2023-6-23/SO Main Body/First/All Sites/Books/Book1/2/cyan/85785264</sourceId>
+                                                    <contentCustomIcons/>
+                                                    <commonId>85785264-cyan</commonId>
+													<platesRef>
+                                                        <plateRef>2023-6-23/SO Main Body/First/All Sites/Books/Book1/2/cyan:First_All Sites_1:0</plateRef>
+                                                    </platesRef>
+                                                </formSeparation>
+                                                <formSeparation>
+                                                    <name>magenta</name>
+                                                    <sourceId>2023-6-23/SO Main Body/First/All Sites/Books/Book1/2/magenta/85785264</sourceId>
+                                                    <contentCustomIcons/>
+                                                    <commonId>85785264-magenta</commonId>
+													<platesRef>
+                                                        <plateRef>2023-6-23/SO Main Body/First/All Sites/Books/Book1/2/magenta:First_All Sites_1:0</plateRef>
+                                                    </platesRef>
+                                                </formSeparation>
+                                            </formSeparations>
+                                        </form>
+                                    </forms>
+                                </book>
+                            </books>
+                        </zone>
+                        <zone>
+                            <name>Free State</name>
+                            <sourceId>2023-6-23/SO Main Body/First/Free State</sourceId>
+                            <code>FS</code>
+							<sections>
+                                <section>
+                                    <name>Section1</name>
+                                    <sourceId>2023-6-23/SO Main Body/First/Free State/Section1</sourceId>
+                                    <code>S1</code>
+                                    <pages>
+                                        <page>
+                                            <name>S1_1</name>
+                                            <sourceId>2023-6-23/SO Main Body/First/Free State/Section1/1/40568750</sourceId>
+                                            <structureExpectedName>SO08_06_23SOP001_FS-40568750.PDF</structureExpectedName>
+                                            <commonId>40568750</commonId>
+                                            <panoramaType>SINGLE</panoramaType>
+                                            <numberInSection>1</numberInSection>
+                                            <pageSeparations>
+                                                <pageSeparation>
+                                                    <name>yellow</name>
+                                                    <sourceId>2023-6-23/SO Main Body/First/Free State/Section1/1/yellow/40568750</sourceId>
+                                                    <contentCustomIcons/>
+                                                    <structureExpectedName>SO08_06_23SOP001_FS-40568750.y</structureExpectedName>
+                                                    <commonId>40568750-yellow</commonId>
+                                                </pageSeparation>
+                                                <pageSeparation>
+                                                    <name>black</name>
+                                                    <sourceId>2023-6-23/SO Main Body/First/Free State/Section1/1/black/40568750</sourceId>
+                                                    <contentCustomIcons/>
+                                                    <structureExpectedName>SO08_06_23SOP001_FS-40568750.k</structureExpectedName>
+                                                    <commonId>40568750-black</commonId>
+                                                </pageSeparation>
+                                                <pageSeparation>
+                                                    <name>cyan</name>
+                                                    <sourceId>2023-6-23/SO Main Body/First/Free State/Section1/1/cyan/40568750</sourceId>
+                                                    <contentCustomIcons/>
+                                                    <structureExpectedName>SO08_06_23SOP001_FS-40568750.c</structureExpectedName>
+                                                    <commonId>40568750-cyan</commonId>
+                                                </pageSeparation>
+                                                <pageSeparation>
+                                                    <name>magenta</name>
+                                                    <sourceId>2023-6-23/SO Main Body/First/Free State/Section1/1/magenta/40568750</sourceId>
+                                                    <contentCustomIcons/>
+                                                    <structureExpectedName>SO08_06_23SOP001_FS-40568750.m</structureExpectedName>
+                                                    <commonId>40568750-magenta</commonId>
+                                                </pageSeparation>
+                                            </pageSeparations>
+                                        </page>
+                                    </pages>
+                                </section>
+                            </sections>
+                            <books>
+                                <book>
+                                    <name>Book1</name>
+                                    <sourceId>2023-6-23/SO Main Body/First/Free State/Books/Book1</sourceId>
+                                    <code>B01</code>
+                                    <impositionType>broadsheet</impositionType>
+                                    <forms>
+                                        <form>
+                                            <name>1</name>
+                                            <sourceId>2023-6-23/SO Main Body/First/Free State/Books/Book1/1</sourceId>
+                                            <commonId>2023-6-23/SO Main Body29ht0g9b12dbc85e32e2b32e18dc7f388</commonId>
+                                            <PageMatrixWidth>1</PageMatrixWidth>
+                                            <PageMatrixHeight>1</PageMatrixHeight>
+                                            <pagesLocationOnForm>
+                                                <pageLocationOnForm>
+                                                    <orientation>0</orientation>
+                                                    <sourceId>2023-6-23/SO Main Body/First/Free State/Section1/1/40568750</sourceId>
+                                                    <index>0</index>
+                                                </pageLocationOnForm>
+                                            </pagesLocationOnForm>
+                                            <formSeparations>
+                                                <formSeparation>
+                                                    <name>yellow</name>
+                                                    <sourceId>2023-6-23/SO Main Body/First/Free State/Books/Book1/1/yellow/40568750</sourceId>
+                                                    <contentCustomIcons/>
+                                                    <commonId>40568750-yellow</commonId>
+													<platesRef>
+                                                        <plateRef>2023-6-23/SO Main Body/First/Free State/Books/Book1/1/yellow:First_Free State_1:0</plateRef>
+                                                    </platesRef>
+                                                </formSeparation>
+                                                <formSeparation>
+                                                    <name>black</name>
+                                                    <sourceId>2023-6-23/SO Main Body/First/Free State/Books/Book1/1/black/40568750</sourceId>
+                                                    <contentCustomIcons/>
+                                                    <commonId>40568750-black</commonId>
+													<platesRef>
+                                                        <plateRef>2023-6-23/SO Main Body/First/Free State/Books/Book1/1/black:First_Free State_1:0</plateRef>
+                                                    </platesRef>
+                                                </formSeparation>
+                                                <formSeparation>
+                                                    <name>cyan</name>
+                                                    <sourceId>2023-6-23/SO Main Body/First/Free State/Books/Book1/1/cyan/40568750</sourceId>
+                                                    <contentCustomIcons/>
+                                                    <commonId>40568750-cyan</commonId>
+													<platesRef>
+                                                        <plateRef>2023-6-23/SO Main Body/First/Free State/Books/Book1/1/cyan:First_Free State_1:0</plateRef>
+                                                    </platesRef>
+                                                </formSeparation>
+                                                <formSeparation>
+                                                    <name>magenta</name>
+                                                    <sourceId>2023-6-23/SO Main Body/First/Free State/Books/Book1/1/magenta/40568750</sourceId>
+                                                    <contentCustomIcons/>
+                                                    <commonId>40568750-magenta</commonId>
+													<platesRef>
+                                                        <plateRef>2023-6-23/SO Main Body/First/Free State/Books/Book1/1/magenta:First_Free State_1:0</plateRef>
+                                                    </platesRef>
+                                                </formSeparation>
+                                            </formSeparations>
+                                        </form>
+                                    </forms>
+                                </book>
+                            </books>
+                        </zone>
+                    </zones>
+                </edition>
+            </editions>
+        </publication>
+    </publications>
+	<productionRuns>
+        <productionRun>
+            <name>First_All Sites_1</name>
+            <sourceId>PR:2023-6-24/SO Main Body/First/All Sites:First_All Sites_1</sourceId>
+            <pressName>Press1</pressName>
+            <presetTime>June-24-2023-22-00-00</presetTime>
+			<plates>
+                <plate>
+                    <name>yellow:0</name>
+					<sourceId>2023-6-23/SO Main Body/First/All Sites/Books/Book1/1/yellow:First_All Sites_1:0</sourceId>
+                    <customProperties/>
+                    <contentCustomIcons/>
+                    <towerName>Tower</towerName>
+                    <plateGroupSourceId>30359340-yellow_Press1_Tower_Cylinder_yellow_TOP</plateGroupSourceId>
+                    <locationOnCylinder>null</locationOnCylinder>
+                    <cylinderName>Cylinder_yellow</cylinderName>
+                    <cylinderSector>Top</cylinderSector>
+                    <plateType>Image</plateType>
+                    <cylinderSectorName>TOP</cylinderSectorName>
+                </plate>
+				<plate>
+                    <name>black:0</name>
+					<sourceId>2023-6-23/SO Main Body/First/All Sites/Books/Book1/1/black:First_All Sites_1:0</sourceId>
+                    <customProperties/>
+                    <contentCustomIcons/>
+                    <towerName>Tower</towerName>
+                    <plateGroupSourceId>30359340-black_Press1_Tower_Cylinder_black_TOP</plateGroupSourceId>
+                    <locationOnCylinder>null</locationOnCylinder>
+                    <cylinderName>Cylinder_black</cylinderName>
+                    <cylinderSector>Top</cylinderSector>
+                    <plateType>Image</plateType>
+                    <cylinderSectorName>TOP</cylinderSectorName>
+                </plate>
+				<plate>
+                    <name>cyan:0</name>
+					<sourceId>2023-6-23/SO Main Body/First/All Sites/Books/Book1/1/cyan:First_All Sites_1:0</sourceId>
+                    <customProperties/>
+                    <contentCustomIcons/>
+                    <towerName>Tower</towerName>
+                    <plateGroupSourceId>30359340-cyan_Press1_Tower_Cylinder_cyan_TOP</plateGroupSourceId>
+                    <locationOnCylinder>null</locationOnCylinder>
+                    <cylinderName>Cylinder_cyan</cylinderName>
+                    <cylinderSector>Top</cylinderSector>
+                    <plateType>Image</plateType>
+                    <cylinderSectorName>TOP</cylinderSectorName>
+                </plate>
+				<plate>
+                    <name>magenta:0</name>
+					<sourceId>2023-6-23/SO Main Body/First/All Sites/Books/Book1/1/magenta:First_All Sites_1:0</sourceId>
+                    <customProperties/>
+                    <contentCustomIcons/>
+                    <towerName>Tower</towerName>
+                    <plateGroupSourceId>30359340-magenta_Press1_Tower_Cylinder_magenta_TOP</plateGroupSourceId>
+                    <locationOnCylinder>null</locationOnCylinder>
+                    <cylinderName>Cylinder_magenta</cylinderName>
+                    <cylinderSector>Top</cylinderSector>
+                    <plateType>Image</plateType>
+                    <cylinderSectorName>TOP</cylinderSectorName>
+                </plate>
+                <plate>
+                    <name>yellow:0</name>
+					<sourceId>2023-6-23/SO Main Body/First/All Sites/Books/Book1/2/yellow:First_All Sites_1:0</sourceId>
+                    <customProperties/>
+                    <contentCustomIcons/>
+                    <towerName>Tower</towerName>
+                    <plateGroupSourceId>85785264-yellow_Press1_Tower_Cylinder_yellow_TOP</plateGroupSourceId>
+                    <locationOnCylinder>null</locationOnCylinder>
+                    <cylinderName>Cylinder_yellow</cylinderName>
+                    <cylinderSector>Top</cylinderSector>
+                    <plateType>Image</plateType>
+                    <cylinderSectorName>TOP</cylinderSectorName>
+                </plate>
+				<plate>
+                    <name>black:0</name>
+					<sourceId>2023-6-23/SO Main Body/First/All Sites/Books/Book1/2/black:First_All Sites_1:0</sourceId>
+                    <customProperties/>
+                    <contentCustomIcons/>
+                    <towerName>Tower</towerName>
+                    <plateGroupSourceId>85785264-black_Press1_Tower_Cylinder_black_TOP</plateGroupSourceId>
+                    <locationOnCylinder>null</locationOnCylinder>
+                    <cylinderName>Cylinder_black</cylinderName>
+                    <cylinderSector>Top</cylinderSector>
+                    <plateType>Image</plateType>
+                    <cylinderSectorName>TOP</cylinderSectorName>
+                </plate>
+				<plate>
+                    <name>cyan:0</name>
+					<sourceId>2023-6-23/SO Main Body/First/All Sites/Books/Book1/2/cyan:First_All Sites_1:0</sourceId>
+                    <customProperties/>
+                    <contentCustomIcons/>
+                    <towerName>Tower</towerName>
+                    <plateGroupSourceId>85785264-cyan_Press1_Tower_Cylinder_cyan_TOP</plateGroupSourceId>
+                    <locationOnCylinder>null</locationOnCylinder>
+                    <cylinderName>Cylinder_cyan</cylinderName>
+                    <cylinderSector>Top</cylinderSector>
+                    <plateType>Image</plateType>
+                    <cylinderSectorName>TOP</cylinderSectorName>
+                </plate>
+				<plate>
+                    <name>magenta:0</name>
+					<sourceId>2023-6-23/SO Main Body/First/All Sites/Books/Book1/2/magenta:First_All Sites_1:0</sourceId>
+                    <customProperties/>
+                    <contentCustomIcons/>
+                    <towerName>Tower</towerName>
+                    <plateGroupSourceId>85785264-magenta_Press1_Tower_Cylinder_magenta_TOP</plateGroupSourceId>
+                    <locationOnCylinder>null</locationOnCylinder>
+                    <cylinderName>Cylinder_magenta</cylinderName>
+                    <cylinderSector>Top</cylinderSector>
+                    <plateType>Image</plateType>
+                    <cylinderSectorName>TOP</cylinderSectorName>
+                </plate>
+			</plates>
+        </productionRun>
+		<productionRun>
+            <name>First_Free State_1</name>
+            <sourceId>PR:2023-6-24/SO Main Body/First/Free State:First_Free State_1</sourceId>
+            <pressName>Press1</pressName>
+            <presetTime>June-24-2023-22-00-00</presetTime>
+			<plates>
+                <plate>
+                    <name>yellow:0</name>
+					<sourceId>2023-6-23/SO Main Body/First/Free State/Books/Book1/1/yellow:First_Free State_1:0</sourceId>
+                    <customProperties/>
+                    <contentCustomIcons/>
+                    <towerName>Tower</towerName>
+                    <plateGroupSourceId>40568750-yellow_Press1_Tower_Cylinder_yellow_TOP</plateGroupSourceId>
+                    <locationOnCylinder>null</locationOnCylinder>
+                    <cylinderName>Cylinder_yellow</cylinderName>
+                    <cylinderSector>Top</cylinderSector>
+                    <plateType>Image</plateType>
+                    <cylinderSectorName>TOP</cylinderSectorName>
+                </plate>
+				<plate>
+                    <name>black:0</name>
+					<sourceId>2023-6-23/SO Main Body/First/Free State/Books/Book1/1/black:First_Free State_1:0</sourceId>
+                    <customProperties/>
+                    <contentCustomIcons/>
+                    <towerName>Tower</towerName>
+                    <plateGroupSourceId>40568750-black_Press1_Tower_Cylinder_black_TOP</plateGroupSourceId>
+                    <locationOnCylinder>null</locationOnCylinder>
+                    <cylinderName>Cylinder_black</cylinderName>
+                    <cylinderSector>Top</cylinderSector>
+                    <plateType>Image</plateType>
+                    <cylinderSectorName>TOP</cylinderSectorName>
+                </plate>
+				<plate>
+                    <name>cyan:0</name>
+					<sourceId>2023-6-23/SO Main Body/First/Free State/Books/Book1/1/cyan:First_Free State_1:0</sourceId>
+                    <customProperties/>
+                    <contentCustomIcons/>
+                    <towerName>Tower</towerName>
+                    <plateGroupSourceId>40568750-cyan_Press1_Tower_Cylinder_cyan_TOP</plateGroupSourceId>
+                    <locationOnCylinder>null</locationOnCylinder>
+                    <cylinderName>Cylinder_cyan</cylinderName>
+                    <cylinderSector>Top</cylinderSector>
+                    <plateType>Image</plateType>
+                    <cylinderSectorName>TOP</cylinderSectorName>
+                </plate>
+				<plate>
+                    <name>magenta:0</name>
+					<sourceId>2023-6-23/SO Main Body/First/Free State/Books/Book1/1/magenta:First_Free State_1:0</sourceId>
+                    <customProperties/>
+                    <contentCustomIcons/>
+                    <towerName>Tower</towerName>
+                    <plateGroupSourceId>40568750-magenta_Press1_Tower_Cylinder_magenta_TOP</plateGroupSourceId>
+                    <locationOnCylinder>null</locationOnCylinder>
+                    <cylinderName>Cylinder_magenta</cylinderName>
+                    <cylinderSector>Top</cylinderSector>
+                    <plateType>Image</plateType>
+                    <cylinderSectorName>TOP</cylinderSectorName>
+                </plate>
+			</plates>
+        </productionRun>
+    </productionRuns>
+</Planning>
+
