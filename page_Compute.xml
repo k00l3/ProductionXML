@@ -1,0 +1,199 @@
+<page xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns="">
+  <xsl:variable name="edition" select="gn4:editionRef/*/gn4:edition" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" />
+  <!--
+                Compute the descritive names
+              -->
+  <xsl:variable name="title" select="$edition/gn4:titleRef/*/gn4:title" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" />
+  <xsl:variable name="master" select="gn4:masterRef/*/gn4:master" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" />
+  <!-- Create the XML nodes containing the variables that can be used in the name (in $vars) -->
+  <xsl:variable name="sectionName" select="gn4:sectionRef/*/gn4:section/@name" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" />
+  <xsl:variable name="zoneName" select="gn4:zoneRef/*/gn4:zone/@name" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" />
+  <xsl:variable name="bookName" select="gn4:bookRef/*/gn4:book/@name" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" />
+  <xsl:variable name="varsFragment" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+    <var name="editionDescName" value="{$edition/@descName}" />
+    <var name="editionShortName" value="{$edition/@shortName}" />
+    <var name="sectionName" value="{substring($sectionName,1,string-length($sectionName)*number($sectionName!='-'))}" />
+    <var name="zoneName" value="{substring($zoneName,1,string-length($zoneName)*number($zoneName!='-'))}" />
+    <var name="bookName" value="{substring($bookName,1,string-length($bookName)*number($bookName!='-'))}" />
+    <var name="number" value="{@number}" />
+    <var name="leftNumber" value="{@number}" />
+    <var name="rightNumber" value="{@number+1}" />
+    <var name="color" value="{@leftColor}" />
+    <var name="leftColor" value="{@leftColor}" />
+    <var name="rightColor" value="{@rightColor}" />
+    <var name="id" value="{fn:objectIdFromString(@id)}" />
+    <var name="logicalPage" value="{@logicalPage}" />
+    <var name="masterName" value="{$master/@name}" />
+  </xsl:variable>
+  <xsl:variable name="vars" select="msxsl:node-set($varsFragment)" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" />
+  <!-- Create the XML nodes containing the templates for descriptive and short names (in $namesTemplate) -->
+  <xsl:variable name="namesTemplateFragment" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+    <!-- Template for descriptive name of single pages -->
+    <template name="descName" isDouble="0">
+      <xsl:variable name="titleTemplate" select="$title/gn4:pageDescName" />
+      <xsl:choose>
+        <xsl:when test="$titleTemplate/*">
+          <xsl:copy-of select="$titleTemplate/*" />
+        </xsl:when>
+        <xsl:otherwise>
+          <var name="editionDescName" />
+          <text value=" " />
+          <var name="bookName" />
+          <text value=" " />
+          <var name="sectionName" />
+          <var-number name="number" format="#" />
+          <text value=" " />
+          <var name="zoneName" />
+        </xsl:otherwise>
+      </xsl:choose>
+    </template>
+    <!-- Template for short name of single pages  -->
+    <template name="shortName" isDouble="0">
+      <xsl:variable name="titleTemplate" select="$title/gn4:pageShortName" />
+      <xsl:choose>
+        <xsl:when test="$titleTemplate/*">
+          <xsl:copy-of select="$titleTemplate/*" />
+        </xsl:when>
+        <xsl:otherwise>
+          <var name="bookName" />
+          <text value=" " />
+          <var name="sectionName" />
+          <var-number name="number" format="#" />
+          <text value=" " />
+          <var name="zoneName" />
+        </xsl:otherwise>
+      </xsl:choose>
+    </template>
+    <!-- Template for descriptive name of double pages  -->
+    <template name="descName" isDouble="1">
+      <xsl:variable name="titleTemplate" select="$title/gn4:doublePageDescName" />
+      <xsl:choose>
+        <xsl:when test="$titleTemplate/*">
+          <xsl:copy-of select="$titleTemplate/*" />
+        </xsl:when>
+        <xsl:otherwise>
+          <var name="editionDescName" />
+          <text value=" " />
+          <var name="bookName" />
+          <text value=" " />
+          <var name="sectionName" />
+          <var-number name="leftNumber" format="#" />
+          <text value="-" />
+          <var-number name="rightNumber" format="#" />
+          <text value=" " />
+          <var name="zoneName" />
+        </xsl:otherwise>
+      </xsl:choose>
+    </template>
+    <!-- Template for short name of double pages  -->
+    <template name="shortName" isDouble="1">
+      <xsl:variable name="titleTemplate" select="$title/gn4:doublePageShortName" />
+      <xsl:choose>
+        <xsl:when test="$titleTemplate/*">
+          <xsl:copy-of select="$titleTemplate/*" />
+        </xsl:when>
+        <xsl:otherwise>
+          <var name="bookName" />
+          <text value=" " />
+          <var name="sectionName" />
+          <var-number name="leftNumber" format="#" />
+          <text value="-" />
+          <var-number name="rightNumber" format="#" />
+          <text value=" " />
+          <var name="zoneName" />
+        </xsl:otherwise>
+      </xsl:choose>
+    </template>
+  </xsl:variable>
+  <xsl:variable name="namesTemplate" select="msxsl:node-set($namesTemplateFragment)" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" />
+  <!-- Create the names replacing the variable part in the templates  -->
+  <xsl:variable name="isDouble" select="number($master/@twoSides='true')" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" />
+  <xsl:for-each select="$namesTemplate/*[@isDouble=$isDouble]" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+    <xsl:attribute name="{@name}">
+      <xsl:for-each select="*">
+        <xsl:choose>
+          <xsl:when test="local-name()='text'">
+            <xsl:value-of select="@value" />
+          </xsl:when>
+          <xsl:when test="local-name()='var'">
+            <xsl:variable name="name" select="@name" />
+            <xsl:value-of select="$vars/var[@name=$name]/@value" />
+          </xsl:when>
+          <xsl:when test="local-name()='var-number'">
+            <xsl:variable name="name" select="@name" />
+            <xsl:value-of select="format-number($vars/var[@name=$name]/@value,@format)" />
+          </xsl:when>
+          <xsl:when test="local-name()='var-boolean'">
+            <xsl:variable name="name" select="@name" />
+            <xsl:variable name="varValue" select="$vars/var[@name=$name]/@value" />
+            <xsl:choose>
+              <xsl:when test="$varValue='true' or $varValue='1'">
+                <xsl:value-of select="@true" />
+              </xsl:when>
+              <xsl:otherwise>
+                <xsl:value-of select="@false" />
+              </xsl:otherwise>
+            </xsl:choose>
+          </xsl:when>
+        </xsl:choose>
+      </xsl:for-each>
+    </xsl:attribute>
+  </xsl:for-each>
+  <!--
+                Compute the deadline
+              -->
+  <xsl:choose xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+    <xsl:when test="string($edition/@date)">
+      <!-- 'Fake' test of the handle attribute to generate a dependency on the plates -->
+      <xsl:if test="string($edition/gn4:plates/@nav:handle)">
+        <!-- The edition has a date, compute the page deadline relative to it -->
+        <xsl:variable name="pageId" select="@id" />
+        <xsl:variable name="pagePlates" select="$edition/gn4:plates/gn4:item[gn4:pageRef0/@idref=$pageId or gn4:pageRef1/@idref=$pageId or gn4:pageRef2/@idref=$pageId or gn4:pageRef3/@idref=$pageId]" />
+        <xsl:variable name="pageDeadlineMinutes">
+          <xsl:choose>
+            <xsl:when test="string(@deadline)">
+              <xsl:value-of select="@deadline" />
+            </xsl:when>
+            <xsl:otherwise>
+              <xsl:value-of select="0" />
+            </xsl:otherwise>
+          </xsl:choose>
+        </xsl:variable>
+        <xsl:variable name="deadlineMinutes">
+          <xsl:choose>
+            <xsl:when test="$pagePlates/*">
+              <xsl:value-of select="$pageDeadlineMinutes+fn:minNumber($pagePlates/@deadline)" />
+            </xsl:when>
+            <xsl:otherwise>
+              <xsl:value-of select="$pageDeadlineMinutes" />
+            </xsl:otherwise>
+          </xsl:choose>
+        </xsl:variable>
+        <xsl:attribute name="autoDeadline">
+          <xsl:value-of select="fn:addDuration($edition/@date,$deadlineMinutes*60)" />
+        </xsl:attribute>
+      </xsl:if>
+    </xsl:when>
+    <xsl:otherwise>
+      <!-- The edition has not date (a template) - hence the page has no deadline -->
+      <xsl:attribute name="autoDeadline" />
+    </xsl:otherwise>
+  </xsl:choose>
+  <!--
+                Compute creation date-time
+              -->
+  <xsl:if test="not(@id)" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+    <xsl:attribute name="creationDate">
+      <xsl:value-of select="$context/oc:OperationContext/@UtcNow" />
+    </xsl:attribute>
+  </xsl:if>
+  <!--
+                Compute creator and last modifier
+              -->
+  <xsl:if test="not(@id)" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+    <creatorRef idref="{$context/lc:LoginContext/@UserId}" />
+  </xsl:if>
+  <xsl:if test="$context/oc:OperationContext/@Kind!='Upgrade'" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+    <modifierRef idref="{$context/lc:LoginContext/@UserId}" />
+  </xsl:if>
+</page>
