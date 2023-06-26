@@ -1,0 +1,109 @@
+<eop:XmlExportOptions xmlns:eop="http://www.teradp.com/schemas/GN4/1/XmlExportOptions.xsd" DataMaxSize="0" AccessStrict="false" RefKeys="true" NavOptions="Referencing" MimeType="application/xml">
+  <eop:Xslt>
+    <xsl:stylesheet version="1.0" exclude-result-prefixes="xsl ms lc oc fn nav gn4 x xhtml l c edWinUI local bp" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:ms="urn:schemas-microsoft-com:xslt" xmlns:lc="http://www.teradp.com/schemas/GN4/1/LoginContext.xsd" xmlns:oc="http://www.teradp.com/schemas/GN4/1/OperationContext.xsd" xmlns:fn="http://www.teradp.com/schemas/GN4/1/Xslt" xmlns:nav="http://www.teradp.com/schemas/GN4/1/ObjNav.xsd" xmlns:gn4="urn:schemas-teradp-com:gn4tera" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:l="http://www.teradp.com/schemas/GN4/1/WinUI" xmlns:c="clr-namespace:TeraDP.GN4.Common;assembly=Common" xmlns:edWinUI="http://www.teradp.com/schemas/GN4/1/EdWinUI" xmlns:local="http://www.w3.org/1999/XSL/Transform" xmlns:bp="http://www.teradp.com/schemas/GN4/1/BindingPath" xmlns="">
+      <xsl:output method="xml" />
+      <xsl:param name="context" />
+      <xsl:param name="pars" />
+      <xsl:template match="/">
+        <editions xmlns="">
+          <xsl:apply-templates />
+        </editions>
+      </xsl:template>
+      <xsl:template match="gn4:objects">
+        <xsl:apply-templates />
+      </xsl:template>
+      <xsl:template match="gn4:edition">
+        <edition>
+          <name>
+            <xsl:value-of select="@name" />
+          </name>
+          <id>
+            <xsl:value-of select="@id" />
+          </id>
+          <date>
+            <xsl:value-of select="fn:toLocalTime(@date)" />
+          </date>
+          <isTemplate>
+            <xsl:value-of select="@isTemplate" />
+          </isTemplate>
+          <modifiedDate>
+            <xsl:value-of select="fn:toLocalTime(@modifiedDate)" />
+          </modifiedDate>
+          <pages>
+            <xsl:for-each select="nav:referencing/nav:referencingBy[@attrName='page.editionRef']/nav:*/nav:refObject/gn4:page">
+              <page>
+                <number>
+                  <xsl:value-of select="@number" />
+                </number>
+                <section>
+                  <xsl:value-of select="gn4:sectionRef/nav:refObject/gn4:section/@name" />
+                </section>
+                <zone>
+                  <xsl:value-of select="gn4:zoneRef/nav:refObject/gn4:zone/@name" />
+                </zone>
+                <book>
+                  <xsl:value-of select="gn4:bookRef/nav:refObject/gn4:book/@name" />
+                </book>
+                <bookExtra>
+                  <xsl:value-of select="gn4:bookRef/nav:refObject/gn4:book/@name" />
+                </bookExtra>
+                <pageMaster>
+                  <xsl:value-of select="gn4:masterRef/nav:refObject/gn4:master/@name" />
+                </pageMaster>
+                <modifiedDate>
+                  <xsl:value-of select="fn:toLocalTime(@modifiedDate)" />
+                </modifiedDate>
+              </page>
+            </xsl:for-each>
+          </pages>
+          <masters>
+            <xsl:for-each select="nav:referencing/nav:referencingBy[@attrName='master.editionRef']/nav:*/nav:refObject/gn4:master">
+              <master>
+                <name>
+                  <xsl:value-of select="@name" />
+                </name>
+                <twoSides>
+                  <xsl:value-of select="@twoSides" />
+                </twoSides>
+                <width>
+                  <xsl:value-of select="@width" />
+                </width>
+                <height>
+                  <xsl:value-of select="@height" />
+                </height>
+                <masterType>
+                  <xsl:value-of select="@masterType" />
+                </masterType>
+                <format>
+                  <xsl:value-of select="gn4:contextRef/nav:refObject/gn4:justContext/@name" />
+                </format>
+              </master>
+            </xsl:for-each>
+          </masters>
+          <titleZones>
+            <xsl:for-each select="gn4:titleRef/nav:refObject/gn4:title/nav:referencing/nav:referencingBy[@attrName='zone.titleRef']/nav:*/nav:refObject/gn4:zone">
+              <zone>
+                <xsl:value-of select="@name" />
+              </zone>
+            </xsl:for-each>
+          </titleZones>
+          <titleSections>
+            <xsl:for-each select="gn4:titleRef/nav:refObject/gn4:title/nav:referencing/nav:referencingBy[@attrName='section.titleRef']/nav:*/nav:refObject/gn4:section">
+              <section>
+                <xsl:value-of select="@name" />
+              </section>
+            </xsl:for-each>
+          </titleSections>
+          <titleBooks>
+            <xsl:for-each select="gn4:titleRef/nav:refObject/gn4:title/nav:referencing/nav:referencingBy[@attrName='book.titleRef']/nav:refs/nav:refObject/gn4:book">
+              <book>
+                <xsl:value-of select="@name" />
+              </book>
+            </xsl:for-each>
+          </titleBooks>
+        </edition>
+      </xsl:template>
+      <xsl:template match="*" />
+    </xsl:stylesheet>
+  </eop:Xslt>
+</eop:XmlExportOptions>
