@@ -44,6 +44,9 @@
 								  <number>
 									<xsl:value-of select="@number" />
 								  </number>
+								  <DPS>
+									<xsl:value-of select="@twoSides" />
+								  </DPS>
 								  <id>
 									<xsl:value-of select="fn:objectIdFromString(@id)"/>
 								  </id>
@@ -72,7 +75,7 @@
 									<xsl:value-of select="gn4:bookRef/nav:refObject/gn4:book/@id" />
 								  </bookID>
 								  <bookExtra>
-									<xsl:value-of select="gn4:bookRef/nav:refObject/gn4:book/gn4:bookExtra/gn4:extraStr" />
+									<xsl:value-of select="gn4:bookRef/nav:refObject/gn4:book/gn4:extraStr" />
 								  </bookExtra>
 								  <pageMaster>
 									<xsl:value-of select="gn4:masterRef/nav:refObject/gn4:master/@name" />
@@ -132,8 +135,11 @@
 							  </xsl:for-each>
 							</titleBooks>
 							<titleExtraBooks>
-								  <xsl:value-of select="gn4:titleRef/nav:refObject/gn4:title/nav:referencing/nav:referencingBy[@attrName='book.titleRef']/nav:*/nav:refObject/gn4:extraStr">
-
+							  <xsl:for-each select="gn4:titleRef/nav:refObject/gn4:title/nav:referencing/nav:referencingBy[@attrName='book.titleRefExtra']/nav:*/nav:refObject/gn4:book">
+								<bookExtra>
+								  <xsl:value-of select="@extraStr" />
+								</bookExtra>
+							  </xsl:for-each>
 							</titleExtraBooks>
 							<editionType>
 							  <xsl:value-of select="gn4:editionTypeRef/nav:refObject/gn4:editionType/@name" />
